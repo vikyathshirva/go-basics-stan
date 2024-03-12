@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"sync"
 	"strconv"
-	"github.com/vikyathshirva/go-basics-stan/user/user.go"
+	"github.com/vikyathshirva/go-basics-stan/user"
 	"github.com/gin-gonic/gin"
 )
 

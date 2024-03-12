@@ -1,4 +1,4 @@
-module proj-cli-stan
+module go-basics-stan
 
 go 1.14
 
