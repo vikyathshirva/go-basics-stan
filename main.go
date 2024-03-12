@@ -1,15 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
-	"sync"
 	"strconv"
 	"github.com/vikyathshirva/go-basics-stan/user"
 	"github.com/gin-gonic/gin"
 )
 
-func setupRoutes(userRepo UserRepository) *gin.Engine {
+func setupRoutes(userRepo user.UserRepository) *gin.Engine {
 	router := gin.Default()
 
 	router.GET("/user/:id", func(c *gin.Context) {
@@ -36,7 +34,7 @@ router.PUT("/user/:id", func(c *gin.Context) {
 		return
 	}
 
-	var user User
+	var user user.User
 	if err := c.ShouldBindJSON(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid input"})
 		return
@@ -82,7 +80,3 @@ func main() {
 	select {}
 }
 
-ory
-	
-	select {}
-}
